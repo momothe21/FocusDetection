@@ -5,6 +5,7 @@
 from tkinter import *
 from tkinter import ttk
 import Help
+import Face
 
 def start():
     #creating starting window
@@ -33,7 +34,12 @@ def start():
     opti.pack(side=TOP)
 
 
-    #Button functions        
+    #Button functions
+    #capture face button
+    def capture_face():
+        menu.withdraw()
+        Face.begin()
+        
     #help button
     def open_help():
         menu.withdraw()
@@ -47,7 +53,7 @@ def start():
 
     #Buttons
     #Start
-    ST = ttk.Button(opti, text="Capture face")
+    ST = ttk.Button(opti, text="Capture face", command= capture_face)
     ST.grid(column=0, row=0)
     ST.grid(ipadx=10, ipady=20)
 

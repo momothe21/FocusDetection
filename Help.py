@@ -12,7 +12,9 @@ import Menu
 def description():
    #creating the new window and centering it
    helpWindow = Toplevel()
+   helpWindow.title("Project Description")
    helpWindow.geometry('+%d+%d' % (510, 50))
+   helpWindow.resizable(False, False)
    
    #Making the info
    #Create the explain window's text

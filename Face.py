@@ -11,7 +11,7 @@ import Fixing
 import Pred
 
 #keeping track
-percentages = [0,0,0,0,0,0,0,0]
+percentages = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 #switch case function for prediction
 def switch_case(case):
@@ -29,30 +29,30 @@ def switch_case(case):
         return "Straight"
     elif case == 80:
         percentages[5]+=1
-        return "Medium right"
+        return "Near right"
     elif case == 90:
         percentages[6]+=1
-        return "Far right"
+        return "Medium right"
     elif case == 110:
-        percentages[6]+=1
+        percentages[7]+=1
         return "Far right"
     elif case == 120:
-        percentages[6]+=1
+        percentages[8]+=1
         return "Far right"
     elif case == 130:
-        percentages[5]+=1
+        percentages[9]+=1
         return "Medium right"
     elif case == 140:
-        percentages[7]+=1
+        percentages[10]+=1
         return "Near right"
     elif case == 190:
-        percentages[3]+=1
+        percentages[11]+=1
         return "Near left"
     elif case == 200:
-        percentages[1]+=1
-        return "Far left"
+        percentages[12]+=1
+        return "Medium left"
     elif case == 240:
-        percentages[1]+=1
+        percentages[13]+=1
         return "Far left"
 
 
@@ -129,6 +129,12 @@ def begin():
         print("Near right: %",100*percentages[5]/percentages[0])
         print("Medium right: %",100*percentages[6]/percentages[0])
         print("Far right: %",100*percentages[7]/percentages[0])
+        print("Upper far right: %",100*percentages[8]/percentages[0])
+        print("Upper medium right: %",100*percentages[9]/percentages[0])
+        print("Upper near right: %",100*percentages[10]/percentages[0])
+        print("Upper near left: %",100*percentages[11]/percentages[0])
+        print("Upper medium left: %",100*percentages[12]/percentages[0])
+        print("Upper far left: %",100*percentages[13]/percentages[0])
       
     #label for predictions
     resultsLabel.grid(column=0, row=2, ipadx=10, ipady= 20)  
